@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Проект от компании iLocked",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/off-art/project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/off-art/project/issues"
+  },
+  "homepage": "https://github.com/off-art/project#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.9.5"
+  }
+}

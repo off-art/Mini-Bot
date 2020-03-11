@@ -1,0 +1,28 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.wrapBox {
+  border: 1px solid red;
+  min-width: 500px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+.windowDilog {
+  border: 1px solid blue;
+  background-color: blue;
+  height: 500px;
+}
+.form {
+  border: 1px solid green;
+  background-color: green;
+}
