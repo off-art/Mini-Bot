@@ -4,31 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/uikit.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Project for iLocked</title>
 </head>
 
 <body>
 
-  <button class="uk-button uk-button-primary uk-margin-small-lef" type="button" uk-toggle="target: #offcanvas-usage">Open</button>
-  <div id="offcanvas-usage" uk-offcanvas>
-    <div class="uk-offcanvas-bar">
-
-      <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-      <h3>Project for iLocked</h3>
-
-      <p>тут типа окно обмена сообщениями </p>
-        <div class="uk-margin">
-          <input class="uk-input uk-form-danger uk-form-width-small" type="text"  >
+  <div class="container">
+    <div class="container__inner">
+      <div class="container__inner_close">✖</div>
+      <div class="container__main-wrapper">
+        <div class="chat-and-input">
+          <div class="chat-wrapper"></div>
+          <div class="chat-and-input__input">
+            <div class="chat-and-input__input_wrapper">
+              <form class="form" action="#">
+                <input rows="1" class="inp_text" autofocus placeholder="Написать ответ боту"></input>
+                <button class="send_button ">▶</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <button class="uk-button uk-button-default">ОТПРАВИТЬ</button>
 
     </div>
+
   </div>
-  <script src="js/uikit.min.js"></script>
-  <script src="js/uikit-icons.min.js"></script>
+  <button class="button bot1 animated infinite pulse delay-2s">Чат</button>
+
   <script src="js/script.js"></script>
 </body>
 
