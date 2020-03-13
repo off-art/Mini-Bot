@@ -16,7 +16,7 @@ button.addEventListener('click', (e) => {
     divTo.classList.add(...aaClass)
     const objDiv = document.querySelector(".chat-wrapper");
     objDiv.scrollTop = objDiv.scrollHeight;
-    divTo.innerHTML = 'Здравствуйте! Я бот поддержки сайта iLocked. Могу вам составить компанию, хотите поговорить?';
+    divTo.innerHTML = 'Здравствуйте! Я бот поддержки сайта iLocked. Нажмите на ▶';
     chat.appendChild(divTo)
   }, 1000);
 });
@@ -160,12 +160,37 @@ function bot() {
       }
     }, {})
 
+    // const resultat = checker(questArray, finalVar);
+    // let result = document.createElement('div');
+    // const resClass = ['to' ,'bounceInLeft', 'animated'];
+    // result.classList.add(...resClass)
+    // result.innerHTML = `На смотри сука, куда ты можешь у нас сходить ${resultat}`;
+    // chat.appendChild(result)
+
     const resultat = checker(questArray, finalVar);
-    let result = document.createElement('div');
-    const resClass = ['to' ,'bounceInLeft', 'animated'];
-    result.classList.add(...resClass)
-    result.innerHTML = `На смотри сука, куда ты можешь у нас сходить ${resultat}`;
-    chat.appendChild(result)
+    let finalQuestName = resultat.map(quest => quest[0]);
+    let finalRefs = resultat.map(quest => quest[1]);
+    let resultwithText = document.createElement('div');
+    const resClass = ['to', 'bounceInLeft', 'animated'];
+      if (resultat.length > 0) {
+      resultwithText.innerText = 'Перейдите по ссылке, чтобы забронировать квест';
+    } else {
+      resultwithText.innerText = 'Мы не смогли подобрать ничего подходящего';
+    }
+    resultwithText.classList.add(...resClass)
+    chat.appendChild(resultwithText);
+    for (let i = 0; i < resultat.length; i++) {
+      let result = document.createElement('div');
+      let resultRefs = document.createElement('a');
+      resultRefs.href = finalRefs[i];
+      resultRefs.innerText = finalQuestName[i]
+      result.classList.add(...resClass);
+      result.classList.add('links')
+      result.appendChild(resultRefs);
+      chat.appendChild(result);
+    }
+
+    
 
 
    
