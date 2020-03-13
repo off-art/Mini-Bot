@@ -9,7 +9,8 @@ body {
   width: 100%;
   max-width: 100%;
   min-height: 3000px;
-  background: url('../img/1.png');
+  background: url('../img/1.png') repeat-y ;
+  background-size: contain;
 }
 .container {
   height: 605px;
