@@ -86,7 +86,7 @@ body {
 
 .chat-wrapper {
   height: 570px;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -192,6 +192,9 @@ a {
   background: red;
   cursor: pointer;
   text-decoration: underline;
+}
+.red {
+  color: red;
 }
 
 .answersDiv {

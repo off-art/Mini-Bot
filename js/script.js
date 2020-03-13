@@ -16,7 +16,7 @@ button.addEventListener('click', (e) => {
     divTo.classList.add(...aaClass)
     const objDiv = document.querySelector(".chat-wrapper");
     objDiv.scrollTop = objDiv.scrollHeight;
-    divTo.innerHTML = `Здравствуйте! Я бот поддержки сайта iLocked. Нажмите на  <b class='red'>▶</b>`;
+    divTo.innerHTML = `Здравствуйте! Я бот сайта iLocked. Я помогу вам выбрать квест. <br> Нажмите на  <b class='red'>▶</b>`;
     chat.appendChild(divTo)
   }, 1000);
 });
@@ -31,7 +31,7 @@ close.addEventListener('click', (e) => {
 
 const questArray = [
   { ageGroup: ["Дети (до 14)", "Подростки (14-18)", "Взрослые (от 18)"], minimalAge: ["6"], peopleGroup: ["2-3", "3-6"], people: ["3", "5", "6"], tagsGenre: ["С актерами", "Театр", "Фантастический"], tagsWho: ["Дети", "Для компании"], tagsGeo: ["Владимирская", "Достоевская", "Звенигородская", "Лиговский проспект", "Обводный канал", "Центральный"], name: "Как приручить драконов", url: "https://ilocked.ru/quest/kak-priruchit-drakonov", type: "theatre", difficulty: "высокая", category: "театр", minimalPrice: "750", metro: "Лиговский проспект", address: "Коломенская, 42" },
-  { ageGroup: ["Дети (до 14)", "Подростки (14-18)", "Взрослые (от 18)"], minimalAge: ["6", "14"], peopleGroup: ["1-2", "2-3"], people: ["1", "3"], tagsGenre: ["Атмосферный", "Интеллектуальный", "Новый", "Семейный", "Фантастический"], tagsWho: ["Дети", "Для компании", "Подростки"], tagsGeo: [], name: "Головоломка*", url: "https://ilocked.ru/quest/golovolomka", type: "quest", difficulty: "стартовая", category: "приключения", minimalPrice: "750", metro: "Звенигородская", address: "Социалистическая, 10" },
+  { ageGroup: ["Дети (до 14)", "Подростки (14-18)", "Взрослые (от 18)"], minimalAge: ["6", "14"], peopleGroup: ["1-2", "2-3"], people: ["1", "3"], tagsGenre: ["Атмосферный", "Интеллектуальный", "Новый", "Семейный", "Фантастический"], tagsWho: ["Дети", "Для компании", "Подростки"], tagsGeo: [], name: "Головоломка", url: "https://ilocked.ru/quest/golovolomka", type: "quest", difficulty: "стартовая", category: "приключения", minimalPrice: "750", metro: "Звенигородская", address: "Социалистическая, 10" },
   { ageGroup: ["Подростки (14-18)", "Взрослые (от 18)"], minimalAge: ["16", "18"], peopleGroup: ["2-3", "3-6"], people: ["2", "6"], tagsGenre: ["С актерами", "Атмосферный", "Дешевый", "Мистический", "Семейный", "Сложный", "Страшный", "Театр", "Фантастический"], tagsWho: ["Для компании", "Подростки"], tagsGeo: ["Владимирская", "Достоевская", "Маяковская", "Центральный"], name: "Театр Минотавра", url: "https://ilocked.ru/quest/teatr-minotavra", type: "theatre", difficulty: "средняя", category: "театр", minimalPrice: "750", metro: "Маяковская", address: "Дмитровский, 3-5" },
   { ageGroup: ["Подростки (14-18)", "Взрослые (от 18)"], minimalAge: ["14", "16"], peopleGroup: ["1-2", "2-3", "3-6"], people: ["1", "5"], tagsGenre: ["Атмосферный", "Новый", "Фантастический"], tagsWho: ["Для компании", "Подростки"], tagsGeo: ["Адмиралтейский", "Невский проспект", "Центральный"], name: "Место Преступления", url: "https://ilocked.ru/quest/mesto-prestupleniya", type: "quest", difficulty: "средняя", category: "приключения", minimalPrice: "450", metro: "Невский проспект", address: "Миллионная, 23" },
   { ageGroup: ["Подростки (14-18)", "Взрослые (от 18)"], minimalAge: ["14", "16"], peopleGroup: ["1-2"], people: ["1", "2"], tagsGenre: ["С актерами", "Атмосферный", "Веселый", "Страшный"], tagsWho: ["Для компании", "Подростки"], tagsGeo: ["Гостиный двор", "Маяковская", "Центральный", "Чернышевская"], name: "Безумие Алисы", url: "https://ilocked.ru/quest/bezumie-alisy", type: "quest", difficulty: "средняя", category: "страшные", minimalPrice: "500", metro: "Чернышевская", address: "Соляной пер.8" },
@@ -80,10 +80,10 @@ function checker(arr, answers) {
 }
 
 const questions = [
-  { "Для кого квест?": ["Дети (до 14)", "Подростки (14-18)", "Взрослые (от 18)"] },
+  { "Кто будет играть?": ["Дети (до 14)", "Подростки (14-18)", "Взрослые (от 18)"] },
   { "Сколько вас будет человек? \n \n (если вас будет больше 6 человек - советуем разделиться на группы)": ["1-2", "2-3", "3-6"] },
   { "Выберите жанр квеста?": ["Веселый", "Интеллектуальный", "Мистический", "На английском", "С актерами", "Страшный", "Театр", "Фантастический", "Экшн", "Эротический"] },
-  { "Какая сложность квиза?": ["стартовая", "средняя", "высокая"] },
+  { "Какую сложность квеста хотите?": ["стартовая", "средняя", "высокая"] },
 ];
 
 const result = {
