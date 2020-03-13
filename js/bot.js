@@ -1,5 +1,5 @@
 // let buttonStart = document.querySelector('.start')
-let button = document.querySelector('.send')
+// let button = document.querySelector('.send')
 let questionNum = 0;
 const questions = [
   { 'Здравствуйте! Играли ли вы у нас?': ['Да', 'Нет'], 'type':'oneOption' },
@@ -12,7 +12,6 @@ let result = []
 //   bot();
 // })
 function bot() {
-
     let question = document.createTextNode(Object.keys(questions[questionNum])[0]);
     document.body.appendChild(question);
     let arrValues = Object.values(questions[questionNum])[0].flat();
@@ -37,3 +36,4 @@ button.addEventListener('click', function () {
   questionNum++;
   // console.log(questionNum);
 })
+

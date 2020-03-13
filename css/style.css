@@ -9,14 +9,13 @@
 body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  min-height: 3000px;
 }
-
 .container {
   height: 605px;
   width: 380px;
   border: none;
-  position: absolute;
+  position: fixed;
   right: -400px;
   bottom: 100px;
   border-radius: 5px;
@@ -25,6 +24,7 @@ body {
 
 .container__inner {
   position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 .container__inner_close {
   cursor: pointer;
@@ -44,73 +44,22 @@ body {
   font-weight: 700;
 }
 
-.container__inner {
-  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-}
-
 .active {
-  height: 605px;
-  width: 380px;
-  box-shadow: 0 0 10px gray;
-  border: none;
-  position: absolute;
   right: 40px;
-  bottom: 100px;
-  border-radius: 5px;
-  right: 50px;
 }
 
-button.bot1 {
-  cursor: pointer;
-  position: absolute;
+.button.bot1 {
+  width: 70px;
+  height: 70px;
+  background: url('../img/customer-support.png') no-repeat center center;
+  outline: none;
+  border: none;
+  position: fixed;
   bottom: 20px;
   right: 40px;
-  outline: none;
-  background: linear-gradient(to bottom, #FFFFFF, #E6E6E6) #F5F5F5 repeat-x;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-  color: #333333;
-  text-decoration: none;
-  font-size: 14px;
-  width: 120px;
-  line-height: 20px;
-  margin: 20px auto;
-  padding: 4px 12px;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  vertical-align: middle;
-  transition-duration: 0.3s;
-  transition-property: transform;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
-button.bot1:before {
-  pointer-events: none;
-  position: absolute;
-  z-index: -1;
-  content: '';
-  top: 100%;
-  left: 5%;
-  height: 10px;
-  width: 90%;
-  opacity: 0;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-  transition-duration: 0.3s;
-  transition-property: transform, opacity;
-}
-
-button.bot1:hover {
-  transform: translateY(-5px);
-}
-
-button.bot1:hover:before {
-  opacity: 1;
-  transform: translateY(5px);
-}
 .chat-and-input__input_wrapper {
   position: relative;
 }
@@ -131,6 +80,7 @@ button.bot1:hover:before {
 
 .chat-wrapper {
   height: 570px;
+  overflow-y: scroll;
   
 }
 .chat-and-input {
@@ -169,24 +119,26 @@ button.bot1:hover:before {
   background: #efefef;
   color: #6f6f6f;
   border-top-left-radius: 0;
-  position: absolute;
-  top: 25px;
-  left: 10px;
+  float: left;
+  font-size: 16px;
+  margin: 15px;
+  
 }
 .from {
   background: #f40000;
   color: #fff;
   border-radius: 20px;
   border-top-right-radius: 0;
-  font-size: 0.905rem;
+  font-size: 16px;
   color: #333;
-  display: inline-block;
+  display: block;
   padding: 10px 15px 8px;
   margin-bottom: 5px;
-  position: absolute;
+  float: right;
   top: 120px;
   right: 10px;
   clear: both;
   max-width: 65%;
-  word-wrap: break-word
+  word-wrap: break-word;
+  margin: 15px;
 }
