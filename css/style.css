@@ -5,13 +5,12 @@
   margin: 0;
   border-radius: 5px;
 }
-
 body {
   width: 100%;
   max-width: 100%;
   min-height: 3000px;
+  background: url('../img/1.png');
 }
-
 .container {
   height: 605px;
   width: 380px;
@@ -22,12 +21,10 @@ body {
   border-radius: 5px;
   transition: all .9s;
 }
-
 .container__inner {
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
-
 .container__inner_close {
   cursor: pointer;
   position: absolute;
@@ -40,17 +37,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .container__inner_close:hover {
   color: red;
   border: 2px solid red;
   font-weight: 700;
 }
-
 .active {
   right: 40px;
 }
-
 .button.bot1 {
   width: 70px;
   height: 70px;
@@ -62,11 +56,9 @@ body {
   right: 40px;
   cursor: pointer;
 }
-
 .chat-and-input__input_wrapper {
   position: relative;
 }
-
 .inp_text {
   position: absolute;
   left: 0;
@@ -81,17 +73,16 @@ body {
   color: brown;
   display: none;
 }
-
 .chat-wrapper {
   height: 570px;
   overflow-y: scroll;
-
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
-
 .chat-and-input {
   border-radius: 5px;
 }
-
 .send_button {
   padding: 3px;
   border: none;
@@ -99,7 +90,7 @@ body {
   right: 1px;
   bottom: 0px;
   margin: 5px;
-  color: #f40000;
+  color: rgb(199, 38, 65);
   cursor: pointer;
   border-radius: 8px;
   font-size: 1.1rem;
@@ -109,12 +100,10 @@ body {
   background: #fff;
   outline: none !important;
 }
-
 .send_button:hover {
   background: #f40000;
   color: #fff;
 }
-
 .to {
   padding: 10px 15px 8px;
   border-radius: 20px;
@@ -123,54 +112,57 @@ body {
   max-width: 65%;
   word-wrap: break-word;
   background: #efefef;
-  color: #6f6f6f;
+  color: #333;
   border-top-left-radius: 0;
   float: left;
   font-size: 16px;
   margin: 15px;
-
+  user-select: none;
 }
 
+
 .from {
-  background: #f40000;
-  color: #fff;
+  background: rgb(255, 201, 201);
+  color: rgb(199, 38, 65);
   border-radius: 20px;
-  border-top-right-radius: 0;
   font-size: 16px;
   color: #333;
   display: block;
   padding: 10px 15px 8px;
   margin-bottom: 5px;
-  float: right;
   top: 120px;
   right: 10px;
   clear: both;
+  text-align: center; 
+  min-width: 50px;
   max-width: 65%;
   word-wrap: break-word;
   margin: 0px 15px 5px 0;
+  cursor: pointer;
 }
-
 input[type=checkbox] {
   display: none;
+  
 }
-
 label {
   user-select: none;
+  cursor: pointer;
 }
-
-
 .blue {
-  background-color: blue;
+  background-color: rgb(199, 38, 65);
+  color: white;
 }
-
-
 a {
   text-decoration: none;
   color: #333;
   display: block;
 }
-
 .links:hover {
   background: #FF8383;
   cursor: pointer;
+}
+.answersDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
