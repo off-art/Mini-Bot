@@ -86,7 +86,8 @@ body {
 
 .chat-wrapper {
   height: 570px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -100,8 +101,8 @@ body {
   padding: 3px;
   border: none;
   position: absolute;
-  right: 1px;
-  bottom: 0px;
+  right: 5px;
+  bottom: 5px;
   margin: 5px;
   color: rgb(199, 38, 65);
   cursor: pointer;
