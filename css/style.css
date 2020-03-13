@@ -146,6 +146,12 @@ body {
 input[type=checkbox] {
   display: none;
 }
-input[type=checkbox]:checked {
-  
+
+label {
+  user-select:none;
+}
+
+
+.blue {
+  background-color: blue;
 }
