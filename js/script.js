@@ -116,13 +116,13 @@ function bot() {
       buttonAns.id = arrValues[i]
 
 
-      answer.appendChild(buttonAns);
-
+      
       // document.body.appendChild(buttonAns);
       let ansFull = document.createElement('label')
       ansFull.innerText = arrValues[i];
       
       // chat.appendChild(buttonAns);
+      ansFull.appendChild(buttonAns);
       answer.appendChild(ansFull)
       answer.appendChild(brTwo)
       chat.appendChild(answer)
@@ -158,7 +158,17 @@ function bot() {
         [el[0]]: acc[el[0]] ? [...acc[el[0]], el[1]] : [el[1]]
       }
     }, {})
-    console.log(checker(questArray, finalVar));
+
+    const resultat = checker(questArray, finalVar);
+    let result = document.createElement('div');
+    const resClass = ['to' ,'bounceInLeft', 'animated'];
+    result.classList.add(...resClass)
+    result.innerHTML = `На смотри сука, куда ты можешь у нас сходить ${resultat}`;
+    chat.appendChild(result)
+
+
+   
+    // console.log(checker(questArray, finalVar));
   }
 }
 
