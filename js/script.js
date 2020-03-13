@@ -190,8 +190,10 @@ chat.addEventListener('click', function (e) {
 
 form.addEventListener('submit', (e) => {
   const chat = document.querySelector(".chat-wrapper");
-  // const aaClass = ['from', 'bounceInRight', 'animated'];
-  input.value = '';
+  const checked = chat.querySelectorAll('.answer:not(.blue)');
+  checked.forEach(elem=> elem.style.display='none');
+  chat.lastElementChild.classList.add('answered');
+  // input.value = '';
   
   bot();
   chat.scrollTop = chat.scrollHeight;

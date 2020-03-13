@@ -5,13 +5,15 @@
   margin: 0;
   border-radius: 5px;
 }
+
 body {
   width: 100%;
   max-width: 100%;
   min-height: 3000px;
-  background: url('../img/1.png') repeat-y ;
+  background: url('../img/1.png') repeat-y;
   background-size: contain;
 }
+
 .container {
   height: 605px;
   width: 380px;
@@ -22,10 +24,12 @@ body {
   border-radius: 5px;
   transition: all .9s;
 }
+
 .container__inner {
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
+
 .container__inner_close {
   cursor: pointer;
   position: absolute;
@@ -38,14 +42,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .container__inner_close:hover {
   color: red;
   border: 2px solid red;
   font-weight: 700;
 }
+
 .active {
   right: 40px;
 }
+
 .button.bot1 {
   width: 70px;
   height: 70px;
@@ -57,9 +64,11 @@ body {
   right: 40px;
   cursor: pointer;
 }
+
 .chat-and-input__input_wrapper {
   position: relative;
 }
+
 .inp_text {
   position: absolute;
   left: 0;
@@ -74,6 +83,7 @@ body {
   color: brown;
   display: none;
 }
+
 .chat-wrapper {
   height: 570px;
   overflow-y: scroll;
@@ -81,9 +91,11 @@ body {
   flex-direction: column;
   background-color: white;
 }
+
 .chat-and-input {
   border-radius: 5px;
 }
+
 .send_button {
   padding: 3px;
   border: none;
@@ -101,10 +113,12 @@ body {
   background: #fff;
   outline: none !important;
 }
+
 .send_button:hover {
   background: #f40000;
   color: #fff;
 }
+
 .to {
   padding: 10px 15px 8px;
   border-radius: 20px;
@@ -134,36 +148,64 @@ body {
   top: 120px;
   right: 10px;
   clear: both;
-  text-align: center; 
+  text-align: center;
   min-width: 50px;
   max-width: 65%;
   word-wrap: break-word;
   margin: 0px 15px 5px 0;
   cursor: pointer;
 }
+
 input[type=checkbox] {
   display: none;
-  
+
 }
+
 label {
   user-select: none;
   cursor: pointer;
 }
+
 .blue {
   background-color: rgb(199, 38, 65);
   color: white;
 }
+
 a {
   text-decoration: none;
-  color: #333;
-  display: block;
+  display: block; 
+  color: #fff;
+  text-align: center;
 }
+
+.links {
+  background-color: maroon;
+  border-radius: 20px;
+  min-width: 200px;
+  /* margin:  5px 0 5px 15px; */
+  margin: 5px auto;
+  
+}
+
 .links:hover {
-  background: #FF8383;
+  background: red;
   cursor: pointer;
+  text-decoration: underline;
 }
+
 .answersDiv {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.answered {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.answer {
+  transition: all .5s;
+}
+.answered > .answer {
+  border-top-right-radius: 0;
 }
