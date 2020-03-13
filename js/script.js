@@ -85,79 +85,14 @@ const questions = [
   { "Какая сложность квиза?": ["стартовая", "средняя", "высокая", "экспертная"] },
 ];
 
-const button = document.querySelector('.send');
-let questionNum = 0;
-
 const result = {
   age: [], people: [], genre: [], difficulty: [],
 };
-const valueResult = [];
-const classResult = [];
-function bot() {
-  const br = document.createElement('br');
-  if (questionNum < questions.length) {
-    const question = document.createTextNode(Object.keys(questions[questionNum])[0]);
-    document.body.appendChild(question);
-    const arrValues = Object.values(questions[questionNum])[0].flat();
-    document.body.appendChild(br);
-    for (let i = 0; i < arrValues.length; i += 1) {
-      const buttonAns = document.createElement('input');
-      const brTwo = document.createElement('br');
-      buttonAns.type = 'checkbox';
-      buttonAns.value = arrValues[i];
-      buttonAns.className = Object.keys(result)[questionNum];
-      buttonAns.id = arrValues[i];
-      document.body.appendChild(buttonAns);
-      const ansFull = document.createElement('label');
-      ansFull.htmlFor = 'ssfs'
-      // ansFull.setAttribute('for', arrValues[i]);
-      ansFull.innerText = arrValues[i];
-      document.body.appendChild(buttonAns);
-      document.body.appendChild(ansFull);
-      document.body.appendChild(brTwo);
-    }
-  } else {
-    const checkedList = document.querySelectorAll('input[type="checkbox"]:checked');
-    const helpVar = [];
-    for (let i = 0; i < checkedList.length; i += 1) {
-      valueResult.push(checkedList[i].value);
-      classResult.push(checkedList[i].className);
-      helpVar.push([classResult[i], valueResult[i]]);
-    }
-    const finalVar = helpVar.reduce((acc, el) => ({
-      ...acc,
-      [el[0]]: acc[el[0]] ? [...acc[el[0]], el[1]] : [el[1]],
-    }), {});
-
-    console.log(checker(questArray, finalVar));
-  }
-}
-button.addEventListener('click', () => {
-  bot();
-  questionNum++;
-});
-
-// let button = document.querySelector('.send')
 let questionNum = 0;
-const questions = [
-  { 'Какой возрастной группы участники?': ['Дети', 'Подростки', 'Взрослые'] },
-  { 'Какая тематика квеста интересна?': ['Актеры', 'Атмосферный', 'Веселый', 'Дешевый', 'Интеллектуальный', 
-  'Мистический', 'На английском', 'Новый', 'Простой', 'Семейный', 'Сложный', 'Страшный', 
-  'Театр', 'Фантастический', 'Экшн', 'Эротический'] },
-  { 'Сколько человек?': ['2', 'От 2 до 6', 'Больше 6'] },
-  { 'Для Кого?' : ['Для взрослых', 'Для детей', 'Для женщин', 'Для компании', 
-  'Для мужчин', 'Для пары', 'Для подростков']},
-  { 'Какая сложность квиза?': ['стартовая', 'средняя', 'высокая', 'экспертная'] }
-]
-let result = {
-  age: [],
-  genre: [],
-  people: [],
-  forWho: [],
-  difficulty: [],
-};
 let valueResult = [];
 let classResult = [];
+
+
 function bot() {
   let br = document.createElement('br');
   if (questionNum < questions.length) {
@@ -223,8 +158,11 @@ function bot() {
         [el[0]]: acc[el[0]] ? [...acc[el[0]], el[1]] : [el[1]]
       }
     }, {})
+    console.log(checker(questArray, finalVar));
   }
 }
+
+
 // button.addEventListener('click', function () {
 //   bot();
 //   questionNum++;
